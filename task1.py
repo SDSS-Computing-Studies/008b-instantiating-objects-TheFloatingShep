@@ -77,15 +77,19 @@ import tkinter as tk
 import os
 
 pets = []
+names = []
 
 class pet:
 
     global pets
+    global names
 
     def __init__(self):
         self.animal = input("Type of animal:\n")
-        self.breed = input("Breed:\n")
-        self.name = input("Name:\n")
+        self.breed = input("Breed\n")
+        n = input("Name:\n")
+        self.name = n
+        names.append(n)
         self.owner = input("Owner:\n")
         self.birth = input("Birthdate\n")
 
@@ -93,11 +97,11 @@ class pet:
         pass
 
     def display(self):
-        print( self.name + " " + self.animal + " " + self.breed + " " + " is owned by " + self.owner)
+        print( self.name + " " + self.animal + "\n" + self.breed + " " + " is owned by " + self.owner)
 
 def main():
     global pets
-    global pet
+    global names
     y = True
     while y == True:
         x = input("Enter 1, 2, or 3\n1. Enter a new pet\n2. Retrieve a pet\n3. Exit\n")
@@ -110,9 +114,10 @@ def main():
                 print("You have no pets!")
             else:
                 os.system("cls")
+                print(names)
                 p = input("Enter pet's name\n")
-                if p in pets:
-                    pets[pets.intex(p)].display()
+                if p in names:
+                    pets[names.index(p)].display()
                 else:
                     os.system("cls")
                     print("You don't have a pet named " + p + "!")
