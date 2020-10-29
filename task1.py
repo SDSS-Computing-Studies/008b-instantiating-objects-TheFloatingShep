@@ -97,7 +97,7 @@ class pet:
         pass
 
     def display(self):
-        print( self.name + " " + self.animal + "\n" + self.breed + " " + " is owned by " + self.owner)
+        print( self.name + " " + self.animal + "\n" + self.breed + " is owned by " + self.owner)
 
 def main():
     global pets
@@ -116,6 +116,7 @@ def main():
                 os.system("cls")
                 print(names)
                 p = input("Enter pet's name\n")
+                os.system("cls")
                 if p in names:
                     pets[names.index(p)].display()
                 else:
