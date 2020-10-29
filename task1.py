@@ -96,13 +96,14 @@ class pet:
         pass
 
     def display(self):
-        print( self.name + " " + self.animal + "\n" + self.breed + " is owned by " + self.owner)
+        #print( self.name + " " + self.animal + "\n" + self.breed + " is owned by " + self.owner)
+        print(self.name + "\n" + self.animal + "\n" + self.breed + "\n" + self.owner)
 
 def main():
     global pets
     global names
     while True:
-        x = input("Enter a new pet\n2. Retrieve a pet\n3. Exit\n")
+        x = input("1. Enter a new pet\n2. Retrieve a pet\n3. Exit\n")
         if x == "1":
             pets.append(pet())
             #os.system("cls")
