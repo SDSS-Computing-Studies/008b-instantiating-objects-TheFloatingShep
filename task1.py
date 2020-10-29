@@ -84,13 +84,13 @@ class pet:
     global names
 
     def __init__(self):
-        self.animal = input("Type of animal:\n")
-        self.breed = input("Breed\n")
-        n = input("Name:\n")
+        self.animal = input("Type of animal:\n").strip()
+        self.breed = input("Breed\n").strip()
+        n = input("Name:\n").strip()
         self.name = n
         names.append(n)
-        self.owner = input("Owner:\n")
-        self.birth = input("Birthdate\n")
+        self.owner = input("Owner:\n").strip()
+        self.birth = input("Birthdate\n").strip()
 
     def __del__(self):
         pass
@@ -103,7 +103,7 @@ def main():
     global pets
     global names
     while True:
-        x = input("1. Enter a new pet\n2. Retrieve a pet\n3. Exit\n")
+        x = input("1. Enter a new pet\n2. Retrieve a pet\n3. Exit\n").strip()
         if x == "1":
             pets.append(pet())
             #os.system("cls")
@@ -114,7 +114,7 @@ def main():
             else:
                 #os.system("cls")
                 #print(names)
-                p = input("Enter pet's name\n")
+                p = input("Enter pet's name\n").strip()
                 #os.system("cls")
                 if p in names:
                     pets[names.index(p)].display()
