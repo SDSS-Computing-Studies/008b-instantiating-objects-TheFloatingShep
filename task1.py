@@ -73,7 +73,6 @@ Buster dog
 Shih-tzu is owned by Christy
 (10 points) 
 """
-#import tkinter as tk
 import os
 
 pets = []
@@ -102,8 +101,7 @@ class pet:
 def main():
     global pets
     global names
-    y = True
-    while y == True:
+    while True:
         x = input("Enter 1, 2, or 3\n1. Enter a new pet\n2. Retrieve a pet\n3. Exit\n")
         if x == "1":
             pets.append(pet())
@@ -119,6 +117,7 @@ def main():
                 os.system("cls")
                 if p in names:
                     pets[names.index(p)].display()
+                    break
                 else:
                     os.system("cls")
                     print("You don't have a pet named " + p + "!")
@@ -130,12 +129,3 @@ def main():
             os.system("cls")
 
 main()
-
-
-
-
-"""
-main = tk.Tk()
-main.title("PETS")
-main.mainloop()
-"""
