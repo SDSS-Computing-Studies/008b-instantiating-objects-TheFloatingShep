@@ -73,7 +73,7 @@ Buster dog
 Shih-tzu is owned by Christy
 (10 points) 
 """
-import tkinter as tk
+#import tkinter as tk
 import os
 
 pets = []
