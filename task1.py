@@ -1,7 +1,6 @@
 #!python3
 
 """
-hi
 Create a class that will store a database for a veterinarian.
 Your class will need the following properties:
 
@@ -74,6 +73,7 @@ Buster dog
 Shih-tzu is owned by Christy
 (10 points) 
 """
+#import os
 
 pets = []
 names = []
@@ -92,6 +92,9 @@ class pet:
         self.owner = input("Owner:\n")
         self.birth = input("Birthdate\n")
 
+    def __del__(self):
+        pass
+
     def display(self):
         print( self.name + " " + self.animal + "\n" + self.breed + " is owned by " + self.owner)
 
@@ -102,21 +105,28 @@ def main():
         x = input("Enter 1, 2, or 3\n1. Enter a new pet\n2. Retrieve a pet\n3. Exit\n")
         if x == "1":
             pets.append(pet())
+            #os.system("cls")
         elif x == "2":
             if len(pets) == 0:
+                #os.system("cls")
                 print("You have no pets!")
             else:
+                #os.system("cls")
                 print(names)
                 p = input("Enter pet's name\n")
+                #os.system("cls")
                 if p in names:
                     pets[names.index(p)].display()
-                    break
+                    #break
                 else:
+                    #os.system("cls")
                     print("You don't have a pet named " + p + "!")
         elif x == "3":
+            #os.system("cls")
             print("Yeah get outta here loser")
             break
         else:
+            #os.system("cls")
             pass
 
 main()
