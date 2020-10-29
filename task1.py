@@ -102,7 +102,7 @@ def main():
     global pets
     global names
     while True:
-        x = input("Enter 1, 2, or 3\n1. Enter a new pet\n2. Retrieve a pet\n3. Exit\n")
+        x = input("Enter a new pet\n2. Retrieve a pet\n3. Exit\n")
         if x == "1":
             pets.append(pet())
             #os.system("cls")
@@ -112,7 +112,7 @@ def main():
                 print("You have no pets!")
             else:
                 #os.system("cls")
-                print(names)
+                #print(names)
                 p = input("Enter pet's name\n")
                 #os.system("cls")
                 if p in names:
