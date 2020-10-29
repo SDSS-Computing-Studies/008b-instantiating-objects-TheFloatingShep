@@ -123,7 +123,7 @@ def main():
                     print("You don't have a pet named " + p + "!")
         elif x == "3":
             #os.system("cls")
-            print("Yeah get outta here loser")
+            #print("Yeah get outta here loser")
             break
         else:
             #os.system("cls")
