@@ -92,9 +92,6 @@ class pet:
         self.owner = input("Owner:\n")
         self.birth = input("Birthdate\n")
 
-    def __del__(self):
-        pass
-
     def display(self):
         print( self.name + " " + self.animal + "\n" + self.breed + " is owned by " + self.owner)
 
